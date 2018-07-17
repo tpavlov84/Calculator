@@ -1,51 +1,52 @@
 <div class="container body-content span=8 offset=2">
     <div class="well">
         <form class="form-inline" action="/" method="POST">
-            <fielset>
+            <fieldset>
                 <div class="form-group">
-                    <div class="col-sm-1">
+                    <div class="col-sm-1 ">
                         <input type="text" class="form-control" id="leftOperand" placeholder="Left Operand"
                                name="calculator[leftOperand]" value="{{calculator.leftOperand}}">
-
                     </div>
                 </div>
 
                 <div class="form-group">
-                    <div class="col-sm-4">
+                    <div class="col-sm-4 ">
                         <select class="form-control" name="calculator[operator]">
                             <option value="+"{{selectif calculator.operator '+'}}>+</option>
                             <option value="-"{{selectif calculator.operator '-'}}>-</option>
                             <option value="*"{{selectif calculator.operator '*'}}>*</option>
                             <option value="/"{{selectif calculator.operator '/'}}>/</option>
+                            <option value="n^x"{{selectif calculator.operator 'n^x'}}>n^x</option>
                         </select>
                     </div>
                 </div>
 
                 <div class="form-group">
-                    <div class="col-sm-4">
+                    <div class="col-sm-4 ">
                         <input type="text" class="form-control" id="rightOperand" placeholder="Right Operand"
                                name="calculator[rightOperand]" value="{{calculator.rightOperand}}">
                     </div>
                 </div>
 
                 <div class="form-group">
-                    <div class="col-sm2">
+                    <div class="col-sm-2 ">
                         <p>=</p>
                     </div>
                 </div>
 
                 <div class="form-group">
-                    <div class="col-sm-4">
-                        <input type="text" class="form-control" id="result" placeholder="Result" name="result" value="{{result}}">
+                    <div class="col-sm-4 ">
+                        <input type="text" class="form-control" id="result" placeholder="Result"
+                               name="result" value="{{result}}">
                     </div>
                 </div>
 
                 <div class="form-group">
                     <div class="col-sm-4 col-sm-offset-4">
-                        <input type="submit" class="btn btn-primary" name="Calculate">
+                        <button type="submit" class="btn btn-primary">Calculate</button>
                     </div>
                 </div>
-            </fielset>
+            </fieldset>
         </form>
     </div>
 </div>

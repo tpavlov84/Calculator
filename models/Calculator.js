@@ -1,24 +1,28 @@
-function Calculator(leftOperand, operator, rightOperand) {
-    this.leftOperand = +leftOperand;
+function Calculator (leftOperand, operator, rightOperand) {
+    this.leftOperand = leftOperand;
     this.operator = operator;
-    this.rightOperand = +rightOperand;
-    tihs.calulatorResult=function () {
-        let result =0;
+    this.rightOperand = rightOperand;
+    
+    this.calculatorResult = function () {
+        let result=0;
         switch (this.operator){
-            case"+":
+            case "+":
                 result = this.leftOperand + this.rightOperand;
                 break;
-            case"-":
-                result = this.leftOperand - rightOperand;
+            case "-":
+                result = this.leftOperand - this.rightOperand;
                 break;
-            case"*":
-                result = this.leftOperand * rightOperand;
+            case "*":
+                result = this.leftOperand * this.rightOperand;
                 break;
-            case"/":
-                result = this.leftOperand / rightOperand;
+            case "/":
+                result = this.leftOperand / this.rightOperand;
+                break;
+            case "n^x":
+                result = Math.pow(this.leftOperand, this.rightOperand);
                 break;
         }
         return result;
     }
 }
-module.export = Calculator;
+module.exports = Calculator;
